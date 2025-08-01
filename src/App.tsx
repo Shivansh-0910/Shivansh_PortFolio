@@ -58,8 +58,8 @@ function App() {
       <About />
       <Education />
       <Skills />
-      <Projects />
       <Certificates />
+      <Projects />
       <Contact />
       <Footer />
       {/* Global animated particles overlay */}
