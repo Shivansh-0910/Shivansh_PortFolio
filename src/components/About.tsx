@@ -82,7 +82,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-32 bg-secondary-gradient relative overflow-hidden">
+    <section id="about" className="py-32 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={sectionRef}>
         <div className="text-center mb-20">
           <h2 className={`text-5xl sm:text-6xl font-black text-white mb-6 transition-all duration-1000 ${
@@ -106,19 +106,19 @@ const About = () => {
             </h3>
             
             <div className="space-y-6 text-lg text-slate-300 leading-relaxed">
-              <p className="glass p-6 rounded-2xl blue-border hover-lift">
+              <p className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 I'm a <span className="text-sky-400 font-bold">dedicated software developer</span> with 
                 a passion for creating innovative solutions using modern technologies. My expertise 
                 spans across full-stack development with a strong foundation in Java and Spring Boot.
               </p>
               
-              <p className="glass p-6 rounded-2xl blue-border hover-lift">
+              <p className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 With hands-on experience in <span className="text-blue-400 font-bold">Spring Boot</span>, 
                 <span className="text-indigo-400 font-bold"> React</span>, and database technologies, 
                 I build scalable applications that deliver exceptional user experiences and robust backend solutions.
               </p>
               
-              <p className="glass p-6 rounded-2xl blue-border hover-lift">
+              <p className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 I'm passionate about <span className="text-sky-300 font-bold">competitive programming</span> and 
                 have solved 750+ DSA problems, earning recognition through various coding competitions and maintaining 
                 a strong problem-solving mindset in all my development work.
@@ -126,7 +126,7 @@ const About = () => {
             </div>
 
             {/* Key Achievements */}
-            <div className="glass p-6 rounded-2xl blue-border hover-lift">
+            <div className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
               <h4 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
                 <Trophy className="text-sky-400" size={24} />
                 Key Achievements
@@ -149,7 +149,7 @@ const About = () => {
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className={`glass p-6 rounded-2xl blue-border hover-lift card-3d group`}
+                  className={`glass-dark p-6 rounded-2xl blue-border hover-lift card-3d group shadow-lg`}
                   style={{ animationDelay: item.delay }}
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 blue-glow group-hover:animate-pulse">
@@ -179,7 +179,7 @@ const About = () => {
             { number: '10+', label: 'Projects Completed', color: 'text-indigo-400' },
             { number: '5⭐', label: 'HackerRank Gold Badge', color: 'text-sky-300' }
           ].map((stat, index) => (
-            <div key={index} className="text-center glass p-6 rounded-2xl blue-border hover-lift">
+            <div key={index} className="text-center glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
               <div className={`text-4xl font-black ${stat.color} mb-2`}>
                 {stat.number}
               </div>

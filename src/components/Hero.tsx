@@ -52,10 +52,19 @@ const Hero = () => {
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
-              animationDelay: `${particle.delay}s`
+              animationDelay: `${particle.delay}s`,
+              background: 'radial-gradient(circle, rgba(14, 165, 233, 0.25) 0%, transparent 70%)',
+              width: `${16 + Math.random() * 32}px`,
+              height: `${16 + Math.random() * 32}px`,
+              borderRadius: '50%'
             }}
           />
         ))}
+        {/* Extra floating shapes for more animation */}
+        <div className="absolute top-10 left-1/4 w-24 h-24 bg-sky-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-1/2 right-10 w-16 h-16 bg-blue-500/10 rounded-lg blur-xl animate-float" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-20 h-20 bg-indigo-500/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '3.5s' }}></div>
+        <div className="absolute bottom-10 right-1/4 w-28 h-28 bg-sky-400/10 rounded-lg blur-2xl animate-float" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
       {/* Subtle mouse follower effect */}
@@ -75,10 +84,11 @@ const Hero = () => {
             {/* Profile Avatar */}
             <div className="mb-12 relative">
               <div className="relative inline-block group">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-5xl sm:text-6xl font-bold shadow-2xl animate-float card-3d blue-glow">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-5xl sm:text-6xl font-bold shadow-2xl animate-float card-3d blue-glow avatar-shine">
                   <span className="text-shimmer">SS</span>
+                  {/* Shine effect */}
+                  <div className="absolute inset-0 rounded-full pointer-events-none avatar-shine-effect"></div>
                 </div>
-                
                 {/* Floating icons */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-sky-400 to-blue-500 rounded-full flex items-center justify-center animate-pulse-blue">
                   <Code className="w-6 h-6 text-white" />
@@ -89,7 +99,6 @@ const Hero = () => {
                 <div className="absolute top-1/2 -right-8 w-8 h-8 bg-gradient-to-br from-sky-300 to-blue-400 rounded-full flex items-center justify-center animate-pulse-blue">
                   <Star className="w-4 h-4 text-white" />
                 </div>
-                
                 {/* Status indicator */}
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-400 rounded-full border-4 border-white animate-pulse-blue shadow-lg">
                   <div className="w-full h-full bg-green-400 rounded-full animate-pulse"></div>
@@ -120,23 +129,24 @@ const Hero = () => {
             </p>
             
             {/* CTA Buttons */}
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <a
                 href="#contact"
-                className="btn-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl magnetic"
+                className="btn-primary text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl magnetic transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/40 hover:brightness-125"
               >
                 Let's Connect
               </a>
               <a
                 href="/resume.pdf"
                 download="Shivansh_Singh_Resume.pdf"
-                className="btn-secondary flex items-center gap-3 text-white px-10 py-4 rounded-full font-bold text-lg magnetic"
+                className="btn-secondary flex items-center gap-3 text-white px-10 py-4 rounded-full font-bold text-lg magnetic transform transition-transform duration-300 hover:scale-105 hover:shadow-blue-500/40 hover:brightness-125"
               >
                 <Download size={24} className="animate-bounce" />
                 Download Resume
               </a>
             </div>
-            
+
             {/* Scroll indicator */}
             <div className="animate-bounce">
               <a 
@@ -161,5 +171,17 @@ const Hero = () => {
     </section>
   );
 };
+
+// Add to your global CSS (index.css):
+// .avatar-shine-effect {
+//   background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+//   mix-blend-mode: lighten;
+//   animation: avatar-shine-move 2.5s linear infinite;
+// }
+// @keyframes avatar-shine-move {
+//   0% { opacity: 0.7; transform: translateX(-40%) rotate(-10deg); }
+//   50% { opacity: 1; transform: translateX(40%) rotate(10deg); }
+//   100% { opacity: 0.7; transform: translateX(-40%) rotate(-10deg); }
+// }
 
 export default Hero;

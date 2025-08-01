@@ -57,7 +57,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-32 bg-secondary-gradient relative overflow-hidden">
+    <section id="projects" className="py-32 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={sectionRef}>
         <div className="text-center mb-20">
           <h2 className={`text-5xl sm:text-6xl font-black text-white mb-6 transition-all duration-1000 ${
@@ -76,7 +76,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative glass rounded-3xl overflow-hidden blue-border hover-lift card-3d ${
+              className={`group relative glass-dark rounded-3xl overflow-hidden blue-border hover-lift card-3d shadow-lg ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}

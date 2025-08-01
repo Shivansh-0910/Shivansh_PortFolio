@@ -7,17 +7,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary-gradient text-white py-16 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center justify-center space-y-8">
-          {/* Logo/Brand */}
-          <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 mx-auto blue-glow">
-              <Cloud className="w-8 h-8 text-white" />
+    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white py-16 relative overflow-hidden glass-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center justify-center space-y-8">
+            {/* Logo/Brand */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4 mx-auto blue-glow">
+                <Cloud className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-shimmer mb-2">Shivansh Singh</h3>
+              <p className="text-slate-400">Full-Stack Developer & Software Architect</p>
             </div>
-            <h3 className="text-2xl font-bold text-shimmer mb-2">Shivansh Singh</h3>
-            <p className="text-slate-400">Full-Stack Developer & Software Architect</p>
-          </div>
+            .glass-dark {
+              background: rgba(15, 23, 42, 0.88);
+              backdrop-filter: blur(18px);
+              border: 1.5px solid rgba(56, 189, 248, 0.25);
+              box-shadow: 0 2px 24px 0 rgba(14, 165, 233, 0.10), 0 1.5px 0 0 rgba(56,189,248,0.10);
+            }
 
           {/* Built with love section */}
           <div className="flex items-center space-x-3 text-center glass p-4 rounded-2xl blue-border">

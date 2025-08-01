@@ -75,7 +75,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-32 bg-primary-gradient relative overflow-hidden">
+    <section id="skills" className="py-32 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={sectionRef}>
         <div className="text-center mb-20">
           <h2 className={`text-5xl sm:text-6xl font-black text-white mb-6 transition-all duration-1000 ${
@@ -94,7 +94,7 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className={`glass p-8 rounded-3xl blue-border hover-lift card-3d ${
+              className={`glass-dark p-8 rounded-3xl blue-border hover-lift card-3d shadow-lg ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ animationDelay: `${categoryIndex * 0.2}s` }}
@@ -160,7 +160,7 @@ const Skills = () => {
             ].map((tech, index) => (
               <span
                 key={index}
-                className="glass px-6 py-3 rounded-full text-white font-semibold blue-border hover-lift magnetic"
+                className="glass-dark px-6 py-3 rounded-full text-white font-semibold blue-border hover-lift magnetic shadow"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tech}

@@ -96,7 +96,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-secondary-gradient relative overflow-hidden">
+    <section id="contact" className="py-32 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" ref={sectionRef}>
         <div className="text-center mb-20">
           <h2 className={`text-5xl sm:text-6xl font-black text-white mb-6 transition-all duration-1000 ${
@@ -125,7 +125,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={item.link}
-                    className="flex items-center gap-6 glass p-6 rounded-2xl blue-border hover-lift card-3d group"
+                    className="flex items-center gap-6 glass-dark p-6 rounded-2xl blue-border hover-lift card-3d group shadow-lg"
                   >
                     <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center blue-glow group-hover:animate-pulse">
                       <div className="text-white group-hover:scale-110 transition-transform duration-300">
@@ -167,7 +167,7 @@ const Contact = () => {
 
             {/* Quick Info Cards */}
             <div className="space-y-4">
-              <div className="glass p-6 rounded-2xl blue-border hover-lift">
+            <div className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 <div className="flex items-center gap-3 mb-3">
                   <Download className="w-6 h-6 text-sky-400" />
                   <h4 className="font-bold text-white">Resume</h4>
@@ -185,7 +185,7 @@ const Contact = () => {
                 </a>
               </div>
               
-              <div className="glass p-6 rounded-2xl blue-border hover-lift">
+            <div className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 <div className="flex items-center gap-3 mb-3">
                   <MessageCircle className="w-6 h-6 text-sky-400" />
                   <h4 className="font-bold text-white">Quick Response</h4>
@@ -196,7 +196,7 @@ const Contact = () => {
                 </p>
               </div>
               
-              <div className="glass p-6 rounded-2xl blue-border hover-lift">
+            <div className="glass-dark p-6 rounded-2xl blue-border hover-lift shadow-lg">
                 <div className="flex items-center gap-3 mb-3">
                   <Star className="w-6 h-6 text-sky-400" />
                   <h4 className="font-bold text-white">Available for</h4>
@@ -216,7 +216,7 @@ const Contact = () => {
           <div className={`transition-all duration-1000 delay-700 ${
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
-            <div className="glass p-8 rounded-3xl blue-border hover-lift">
+            <div className="glass-dark p-8 rounded-3xl blue-border hover-lift shadow-lg">
               <h3 className="text-3xl font-bold text-white mb-8">
                 Send <span className="text-primary-gradient">Message</span>
               </h3>
