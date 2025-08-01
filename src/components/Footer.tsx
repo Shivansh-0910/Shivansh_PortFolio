@@ -18,12 +18,6 @@ const Footer = () => {
               <h3 className="text-2xl font-bold text-shimmer mb-2">Shivansh Singh</h3>
               <p className="text-slate-400">Full-Stack Developer & Software Architect</p>
             </div>
-            .glass-dark {
-              background: rgba(15, 23, 42, 0.88);
-              backdrop-filter: blur(18px);
-              border: 1.5px solid rgba(56, 189, 248, 0.25);
-              box-shadow: 0 2px 24px 0 rgba(14, 165, 233, 0.10), 0 1.5px 0 0 rgba(56,189,248,0.10);
-            }
 
           {/* Built with love section */}
           <div className="flex items-center space-x-3 text-center glass p-4 rounded-2xl blue-border">

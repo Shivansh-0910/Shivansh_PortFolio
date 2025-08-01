@@ -48,9 +48,9 @@ const Education = () => {
       scores: [
         { level: 'Senior Secondary (ISC Board)', score: '82/100' },
         { level: 'Secondary (ICSE Board)', score: '92/100' }
-                  className={`glass-dark rounded-3xl p-8 blue-border hover-lift card-3d group shadow-lg ${
+      ],
       type: 'High School',
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />, 
       color: 'from-blue-500 to-indigo-600'
     }
   ];
@@ -70,12 +70,11 @@ const Education = () => {
             My academic journey and educational background in computer science and technology
           </p>
         </div>
-  .glass-dark {
-    background: rgba(15, 23, 42, 0.88);
-    backdrop-filter: blur(18px);
-    border: 1.5px solid rgba(56, 189, 248, 0.25);
-    box-shadow: 0 2px 24px 0 rgba(14, 165, 233, 0.10), 0 1.5px 0 0 rgba(56,189,248,0.10);
-  }
+        {/* Education Cards */}
+        <div className="space-y-16">
+          {education.map((edu, index) => (
+            <div
+              key={index}
               className={`glass-dark rounded-3xl p-8 blue-border hover-lift card-3d group shadow-lg ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
@@ -116,7 +115,6 @@ const Education = () => {
                         {edu.period}
                       </div>
                     </div>
-                    
                     {/* GPA or Scores */}
                     {edu.gpa && (
                       <div className="glass p-4 rounded-xl blue-border text-center">
@@ -130,7 +128,6 @@ const Education = () => {
                       </div>
                     )}
                   </div>
-
                   {/* Scores for School */}
                   {edu.scores && (
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -149,7 +146,6 @@ const Education = () => {
                       ))}
                     </div>
                   )}
-
                   {/* Coursework */}
                   {edu.coursework && (
                     <div>
@@ -173,7 +169,6 @@ const Education = () => {
               </div>
             </div>
           ))}
-        </div>
 
         {/* Academic Highlights */}
         <div className={`mt-20 transition-all duration-1000 delay-1000 ${
@@ -212,6 +207,7 @@ const Education = () => {
           </div>
         </div>
       </div>
+    </div>
     </section>
   );
 };

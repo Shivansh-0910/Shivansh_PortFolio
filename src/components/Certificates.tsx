@@ -20,8 +20,8 @@ const certificates = [
   {
     title: 'Problem Solving(Intermediate) - Hackerrank',
     issuer: 'Hackerrank',
-    date: 'Jaly 2025',
-    link: 'https://www.hackerrank.com/certificates/d667a766355dhttps://www.hackerrank.com/certificates/iframe/d667a766355d',
+    date: 'July 2025',
+    link: 'https://www.hackerrank.com/certificates/d667a766355d',
     file: '/problem_solving_intermediate certificate.pdf',
   },
 ];
